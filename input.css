@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{scroll-behavior: smooth;}
+.cardHover:hover i{color: #84cc16;background-color:#172554;}
+.linkHover:hover a{color: white;}
+html{scrollbar-width: normal;scrollbar-color: #84cc16 #172554;}
+.inter{font-family: 'Inter', sans-serif; letter-spacing: -1px;}
