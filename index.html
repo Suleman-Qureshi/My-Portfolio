@@ -14,10 +14,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="overflow-x-hidden w-screen inter">
+    <span class="fixed right-0 w-10/12 h-screen p-12 z-50 hidden justify-center items-center backdrop-blur-3xl bg-black bg-opacity-40" id="img_page_1">
+        <img src="./recources/my_pic.jpg" alt="my_img" class="h-full rounded-full">
+    </span>
     <span id="ham_burger" class="fixed top-2 left-2 hidden max-md:flex z-30 p-2 rounded-lg backdrop-blur-md bg-lime-500"><i class="fa-solid fa-bars text-blue-950 fa-2x"></i></span>
     <nav id="MobileMenu" class="h-screen px-2 py-6 fixed bg-blue-950 text-white flex-col justify-between hidden">
         <div class="flex flex-col justify-center items-center w-full space-y-1 text-center">
-        <div class="w-24 rounded-full mt-12 border-8 border-slate-600 overflow-hidden"><img src="./recources/Picture1 (1).png" alt="user_img/jpg" class="w-full h-full rounded-full bg-blend-darken"></div>
+        <div class="w-24 rounded-full mt-12 border-8 border-slate-600 overflow-hidden cursor-pointer"><img src="./recources/my_pic.jpg" alt="user_img/jpg" class="w-full h-full rounded-full bg-blend-darken  my_img"></div>
         <p class="text-lg font-semibold w-full text-center">Suleman</p>
         <div class="flex item-center space-x-4 mt-3">
         <a href="https://www.instagram.com/dezignspectrum?igsh=MXF0Zm9mMWlvcWtuNQ==" target="_blank"> <i class="fa-brands fa-square-instagram hover:text-blue-950 p-3 text-lime-500 bg-slate-600 hover:bg-lime-500 duration-200 rounded-full cursor-pointer"></i></a>
@@ -38,7 +41,7 @@
         </nav>
     <nav id="navBar" class="h-screen px-6 py-2 fixed bg-blue-950 text-white flex flex-col justify-between max-md:hidden">
     <div class="flex flex-col justify-center items-center w-full space-y-1 text-center">
-    <div class="w-32 rounded-full mt-12 border-8 border-slate-600 overflow-hidden"><img src="./recources/Picture1 (1).png" alt="user_img/jpg" class="w-full h-full rounded-full bg-blend-darken"></div>
+    <div class="w-32 rounded-full mt-12 border-8 border-slate-600 overflow-hidden cursor-pointer" ><img src="./recources/my_pic.jpg" alt="user_img/jpg" class="w-full h-full rounded-full bg-blend-darken relative my_img"></div>
     <p class="text-2xl font-semibold w-full text-center">Suleman</p>
     <div class="flex item-center space-x-4 mt-3">
     <a href="https://www.instagram.com/dezignspectrum?igsh=MXF0Zm9mMWlvcWtuNQ==" target="_blank"> <i class="fa-brands fa-square-instagram  fa-lg hover:text-blue-950 px-3 py-4 text-lime-500 bg-slate-600 hover:bg-lime-500 duration-200 rounded-full cursor-pointer"></i></a>
@@ -66,7 +69,7 @@
     <h1 class="text-3xl text-blue-950 font-semibold border-b-4 border-lime-500 pb-2 w-16">About</h1>
     <p class="text-slate-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo possimus aliquam expedita? Placeat corporis reiciendis repudiandae animi non. Et laudantium voluptas quos aperiam, ipsum iusto commodi esse voluptates eius modi.</p></div>
     <div class="mx-12 max-2xl:mx-10 max-md:mx-1 flex max-lg:flex-col max-xl:items-center max-lg:items-start max-lg:space-x-0 space-x-8 max-2xl:space-x-4">
-    <img src="./recources/FB_IMG_1701778803543.jpg" alt="User_img" class="h-96">
+    <img src="./recources/FB_IMG_1701778803543.jpg" alt="User_img" class="h-96 rounded-md">
     <div class="flex flex-col justify-between">
     <h3 class="text-3xl max-2xl:text-2xl font-semibold text-blue-950">UI/UX Designer & Web Developer.</h3>
     <p class="italic text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aspernatur quidem laudantium harum, reiciendis expedita fuga necessitatibus magnam tempore. Rerum!</p>
@@ -182,33 +185,52 @@
     <div class="w-1/2 h-full bg-lime-500"></div>
     </div></div></div></div></div>
 </section><hr>
+<!-- |----------------------------------------------------------------------|Protfolio|---------------------------------------------------------------------------| -->
 <section id="Portfolio" class="w-screen flex flex-col pl-72 pr-16 py-10 space-y-12 max-md:pl-0">
     <div class="mx-12 max-md:ml-1">
     <h1 class="text-3xl text-blue-950 font-semibold border-b-4 border-lime-500 pb-2 w-14">Portfolio</h1>
     <p class="text-slate-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo possimus aliquam expedita? Placeat corporis reiciendis repudiandae animi non. Et laudantium voluptas quos aperiam, ipsum iusto commodi esse voluptates eius modi.</p>    
     </div>
     <div class="flex justify-center items-center">
-    <div class="p-3 bg-slate-100 space-x-12 flex justify-center items-center rounded-full font-medium text-lg text-slate-500">
-    <div class="cursor-pointer text-lime-500 duration-200">All</div>
-    <div class="cursor-pointer hover:text-lime-500 duration-200">WEB-1</div>
-    <div class="cursor-pointer hover:text-lime-500 duration-200">WEB-2</div>
-    <div class="cursor-pointer hover:text-lime-500 duration-200">WEB-3</div>
+    <div class="p-3 bg-slate-100 space-x-12 flex justify-center items-center rounded-full font-medium text-slate-500">
+    <div class="cursor-pointer text-lime-500 duration-200 hover:text-lime-500" id="P-btn-1">All</div>
+    <div class="cursor-pointer hover:text-lime-500 duration-200" id="P-btn-2">Custom-CSS</div>
+    <div class="cursor-pointer hover:text-lime-500 duration-200" id="P-btn-3">Tailwind CSS</div>
+    <div class="cursor-pointer hover:text-lime-500 duration-200" id="P-btn-4">React-js</div>
     </div></div>
     <div class="flex flex-col space-y-12 p-5">
     <div class="flex justify-center space-x-12 max-md:flex-col max-md:space-x-0 max-md:space-y-12 max-md:items-center">
-    <div class=" w-2/5 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md">
+    <div class=" w-1/4 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md" id="C-CSS-1">
     <a href=" https://suleman-qureshi.github.io/Sample-site-1/" target="_blank"><img class="w-full h-full hover:scale-105 duration-300" src="./recources/mockups/Slide1.PNG" alt=""></a>
     </div>
-    <div class=" w-2/5 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md">
+    <div class=" w-1/4 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md" id="Tailwind-CSS-1">
     <a href="https://suleman-qureshi.github.io/sample-site-3/" target="_blank"><img class="w-full h-full hover:scale-105 duration-300" src="./recources/mockups/Slide2.PNG" alt=""></a>
-    </div></div>
+    </div>
+    <div class=" w-1/4 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md" id="Tailwind-CSS-2">
+        <a href="https://suleman-qureshi.github.io/sample-ste-6/" target="_blank"><span class="text-4xl font-semibold italic w-full h-full flex justify-center items-center">Restuarant</span><img class="w-full h-full hover:scale-105 duration-300" src="" alt=""></a>
+        </div>
+</div>
     <div class="flex justify-center space-x-12  max-md:flex-col max-md:space-x-0 max-md:space-y-12 max-md:items-center">
-    <div class=" w-2/5 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md">
+    <div class=" w-1/4 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md" id="Tailwind-CSS-3">
     <a href="https://suleman-qureshi.github.io/sample-site-4/" target="_blank"><img class="w-full h-full hover:scale-105 duration-300" src="./recources/mockups/Slide3.PNG" alt=""></a>
     </div>
-    <div class=" w-2/5 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md">
+    <div class=" w-1/4 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md" id="Tailwind-CSS-4">
     <a href="https://suleman-qureshi.github.io/sample-site-5/" target="_blank"><img class="w-full h-full hover:scale-105 duration-300" src="./recources/mockups/real estate.png" alt=""></a>
-    </div></div></div>
+    </div>
+    <div class=" w-1/4 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md" id="Tailwind-CSS-5">
+        <a href="https://suleman-qureshi.github.io/sample-site-2/" target="_blank"><span class="text-4xl font-semibold italic w-full h-full flex justify-center items-center">Website</span><img class="w-full h-full hover:scale-105 duration-300" src="" alt=""></a>
+        </div>
+    
+    </div>
+    <div class="flex justify-center space-x-12  max-md:flex-col max-md:space-x-0 max-md:space-y-12 max-md:items-center">
+        <div class=" w-1/4 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md" id="React-1">
+            <a href="https://react-site-2-omega.vercel.app/" target="_blank"><span class="text-4xl font-semibold italic w-full h-full flex justify-center items-center">Portfolio</span><img class="w-full h-full hover:scale-105 duration-300" src="" alt=""></a>
+            </div>
+            <div class=" w-1/4 max-md:w-3/4 bg-slate-300 overflow-hidden rounded-md" id="React-2">
+                <a href="https://react-site-1-suleman-qureshis-projects.vercel.app/" target="_blank"><span class="text-4xl font-semibold italic w-full h-full flex justify-center items-center">Softland</span><img class="w-full h-full hover:scale-105 duration-300" src="./recources/mockups/Slide3.PNG" alt=""></a>
+                </div>
+    </div>
+</div>
 </section><hr>
 <section id="Contact" class="w-screen justify-center items-center flex flex-col pl-72 pr-16 max-lg:pr-0 py-10 space-y-12 max-md:pl-0 max-md:px-4 max-sm:px-1">
     <div class="mx-12 max-xl:ml-10 max-md:ml-1">
@@ -255,7 +277,7 @@
     <label for="message" class="font-medium ml-2">Message</label>
     <textarea name="message" id="txtarea" class="w-full border-2 border-slate-500 outline-lime-500 p-1 " rows="15"></textarea>
     <div class="w-full text-center justify-center flex items-center text-white mt-3">
-    <button class=" border-2 border-lime-500 rounded-md px-6 py-2 bg-lime-500  font-bold hover:text-lime-500 hover:bg-transparent duration-200">Submit</button>
+    <button class="border-2 border-lime-500 rounded-md px-6 py-2 bg-lime-500  font-bold hover:text-lime-500 hover:bg-transparent duration-200">Submit</button>
     </div></form><div></div></div>
 </section>
 </main>

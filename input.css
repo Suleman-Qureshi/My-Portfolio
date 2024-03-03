@@ -6,3 +6,13 @@
 .linkHover:hover a{color: white;}
 html{scrollbar-width: normal;scrollbar-color: #84cc16 #172554;}
 .inter{font-family: 'Inter', sans-serif; letter-spacing: -1px;}
+.animation-1{animation: slide_1 forwards .2s 1 linear;}@keyframes slide_1{
+    0%{
+        scale: .4;
+    }90%{
+scale: 1;
+    }100%{
+        scale: .9;
+
+    }
+}
