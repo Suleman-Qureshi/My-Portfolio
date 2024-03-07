@@ -1,18 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{scroll-behavior: smooth;}
-.cardHover:hover i{color: #84cc16;background-color:#172554;}
-.linkHover:hover a{color: white;}
-html{scrollbar-width: normal;scrollbar-color: #84cc16 #172554;}
-.inter{font-family: 'Inter', sans-serif; letter-spacing: -1px;}
-.animation-1{animation: slide_1 forwards .2s 1 linear;}@keyframes slide_1{
-    0%{
-        scale: .4;
-    }90%{
-scale: 1;
-    }100%{
-        scale: .9;
-
-    }
+* {
+  scroll-behavior: smooth;
 }
+.cardHover:hover i {
+  color: #84cc16;
+  background-color: #172554;
+}
+.linkHover:hover a {
+  color: white;
+}
+html {
+  scrollbar-width: normal;
+  scrollbar-color: #84cc16 #172554;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  letter-spacing: -1px;
+}
+.animation-1 {
+  animation: slide_1 forwards 0.2s 1 linear;
+}
+@keyframes slide_1 {
+  0% {
+    scale: 0.4;
+  }
+  90% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.9;
+  }
+}
+.slide-1{animation: slide-1 10s infinite linear;}@keyframes slide-1{to{transform: translateY(-100%);}}
+.slide-2{animation: slide-2 10s infinite linear;}@keyframes slide-2{to{transform: translateY(-100%);}}
+.slide-3{animation: slide-3 10s infinite linear reverse;}@keyframes slide-3{to{transform: translateY(-100%);}}
+.slide-4{animation: slide-4 10s infinite linear reverse;}@keyframes slide-4{to{transform: translateY(-100%);}}
