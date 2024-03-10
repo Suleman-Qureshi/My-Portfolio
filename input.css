@@ -37,3 +37,7 @@ html {
 .slide-2{animation: slide-2 10s infinite linear;}@keyframes slide-2{to{transform: translateY(-100%);}}
 .slide-3{animation: slide-3 10s infinite linear reverse;}@keyframes slide-3{to{transform: translateY(-100%);}}
 .slide-4{animation: slide-4 10s infinite linear reverse;}@keyframes slide-4{to{transform: translateY(-100%);}}
+.barWidthSlide{animation: slide-5 1s 1 ease-in-out forwards;}@keyframes slide-5{
+  from{width: 0%;}
+  to{width: 100%;}
+}

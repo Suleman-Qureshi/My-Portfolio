@@ -17,8 +17,20 @@ let Porfolio_btn_1 = document.getElementById("P-btn-1");
 let Porfolio_btn_2 = document.getElementById("P-btn-2");
 let Porfolio_btn_3 = document.getElementById("P-btn-3");
 let Porfolio_btn_4 = document.getElementById("P-btn-4");
+let bars = document.querySelectorAll(".bar");
+let img_div_mt=document.getElementById('img_div')
+let bar_width_0 = bars.forEach((e) => {
+  e.style.width = "0%";
+});
+setInterval(() => {
+  if (window.innerHeight>550) {
+    img_div_mt.classList.add(`mt-8`)
+  }else{
+    img_div_mt.classList.remove(`mt-8`)
+  }
+}, 1);
+bar_width_0;
 my_img.forEach((img) => {
-  console.log(img);
   img.addEventListener(`mousedown`, () => {
     img_div.classList.remove(`hidden`);
     img_div.classList.add(`flex`);
@@ -100,4 +112,19 @@ Porfolio_btn_4.addEventListener(`click`, () => {
   Tailwind_css_5.classList.add("hidden");
   React_1.classList.remove("hidden");
   React_2.classList.remove("hidden");
+});
+window.addEventListener(`scroll`, () => {
+  bars.forEach((e) => {
+    if (window.innerWidth > 1200) {
+      e.classList.toggle(`barWidthSlide`, window.scrollY > 1820);
+    } else if (window.innerWidth < 1200 || window.innerWidth > 1024) {
+      e.classList.toggle(`barWidthSlide`, window.scrollY > 2532);
+    } else if (window.innerWidth < 1024 || window.innerWidth > 850) {
+      e.classList.toggle(`barWidthSlide`, window.scrollY > 3210);
+    } else if (window.innerWidth < 850 || window.innerWidth > 790) {
+      e.classList.toggle(`barWidthSlide`, window.scrollY > 3400);
+    } else {
+      bar_width_0;
+    }
+  });
 });
